@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #05070a;
+  color: #e8efe9;
+  font-family: 'JetBrains Mono', monospace;
+}
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+::selection { background: #00ff88; color: #001a0d; }
+a { -webkit-tap-highlight-color: transparent; }
+
+/* Skip link */
+.v3-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  background: #00ff88;
+  color: #001a0d;
+  padding: 10px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #001a0d;
+}
+.v3-skip:focus { left: 12px; top: 12px; }
