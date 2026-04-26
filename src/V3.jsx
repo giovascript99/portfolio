@@ -925,6 +925,11 @@ function V3({ lang, setLang }) {
               <span className="v3-cm-val">{D.email}</span>
               <span className="v3-cm-arrow">→</span>
             </a>
+            <a href="/cv/CV%20-%20Giovanni%20Carlo%20Perniola.pdf" target="_blank" rel="noopener noreferrer" download className="v3-contact-mail v3-reveal">
+              <span className="v3-cm-label">◆ CV</span>
+              <span className="v3-cm-val">{lang === 'it' ? 'Scarica il curriculum' : 'Download resume'}</span>
+              <span className="v3-cm-arrow">↓</span>
+            </a>
             <a href={`https://github.com/${D.github}`} target="_blank" rel="noopener noreferrer" className="v3-contact-mail v3-reveal">
               <span className="v3-cm-label">◆ GITHUB</span>
               <span className="v3-cm-val">github.com/{D.github}</span>

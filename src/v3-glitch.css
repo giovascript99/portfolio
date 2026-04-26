@@ -36,7 +36,7 @@
   background: var(--bg);
   color: var(--text);
   font-family: 'JetBrains Mono', 'SF Mono', monospace;
-  overflow-x: hidden;
+  overflow-x: clip;
   font-size: 13px;
 }
 .v3-root * { box-sizing: border-box; }
@@ -816,15 +816,16 @@
 
 .v3-contact-mail {
   display: grid;
-  grid-template-columns: 120px 1fr 40px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
-  padding: 24px 28px;
+  gap: 16px;
+  padding: 20px 22px;
   border: 1px solid var(--border);
   background: var(--surface);
   text-decoration: none;
   color: var(--text);
   transition: all 0.3s;
+  min-width: 0;
 }
 .v3-contact-mail:hover {
   border-color: var(--accent);
@@ -839,10 +840,14 @@
 }
 .v3-cm-val {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(20px, 3vw, 32px);
+  font-size: clamp(14px, 1.4vw, 20px);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .v3-cm-arrow {
   font-size: 24px;
@@ -1111,7 +1116,7 @@
 .v3-contact-alt {
   margin-top: 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
